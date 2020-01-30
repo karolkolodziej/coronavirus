@@ -1,0 +1,189 @@
+/*
+0 - 600px-Phone
+600 - 900px-Tablet portrait
+900 - 1200px-Tablet landscape
+[1200 - 1800]-normal styles apply
+1800px + -Big desktop
+
+$breakpoints:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  background-color: #fff;
+  color: #2f3841;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6; }
+
+.header-1 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 0%;
+  color: #fff;
+  padding-top: 20rem;
+  text-align: center; }
+
+.header-2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 0%;
+  padding-top: 20rem;
+  text-align: center; }
+
+.btn, .btn:link, .btn:visited {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  margin: 1rem 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  cursor: pointer; }
+  .btn img, .btn:link img, .btn:visited img {
+    width: 2rem; }
+  .btn:hover, .btn:link:hover, .btn:visited:hover {
+    transform: translateY(-2px); }
+  .btn:active, .btn:focus, .btn:link:active, .btn:link:focus, .btn:visited:active, .btn:visited:focus {
+    transform: translateY(0px); }
+
+.btn-text:link, .btn-text:visited {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  margin: 1rem 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  cursor: pointer; }
+
+.header {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  color: #fff;
+  background-color: #2e2e2e;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%); }
+  .header__tittle {
+    position: absolute;
+    top: 5vh;
+    left: 10%;
+    width: 10rem; }
+  .header__phone {
+    position: absolute;
+    top: 20vh;
+    left: 10%; }
+    .header__phone img {
+      width: 30rem; }
+      @media only screen and (max-width: 37.5em) {
+        .header__phone img {
+          display: none; } }
+  .header__text {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    width: 40vw; }
+    @media only screen and (max-width: 37.5em) {
+      .header__text {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 90vw;
+        text-align: center; } }
+    .header__text--main {
+      font-size: 4rem;
+      font-weight: lighter;
+      padding-bottom: 4rem; }
+    .header__text--sub {
+      font-size: 1.5rem;
+      font-weight: lighter;
+      line-height: 4rem; }
+
+.about {
+  position: relative;
+  height: auto;
+  padding: 20rem 0 20rem 0; }
+  .about__text {
+    text-align: center;
+    margin: 5rem; }
+  .about img {
+    max-width: 80vw;
+    max-width: 100%;
+    border-radius: 50rem; }
+
+.data {
+  position: relative;
+  height: 50rem;
+  background-color: #2e2e2e;
+  color: #fff; }
+  .data__source {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    line-height: 2rem;
+    display: inline;
+    width: 95%; }
+    .data__source p {
+      padding-top: 2rem; }
+    .data__source a {
+      color: yellow; }
+
+.statistics {
+  position: relative;
+  height: 50rem;
+  padding-top: 20rem;
+  line-height: 4rem;
+  padding: 20rem 0 20rem 0; }
+  .statistics__content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%; }
+  .statistics img {
+    width: 3rem; }
+
+.contact {
+  position: relative;
+  height: 40rem;
+  background-color: #2e2e2e;
+  color: #fff; }
+  .contact__content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: inline-block; }
+    .contact__content__input input {
+      width: 50%;
+      padding: 6rem;
+      border-radius: 3px; }

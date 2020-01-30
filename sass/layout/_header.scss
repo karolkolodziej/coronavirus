@@ -1,0 +1,53 @@
+.header {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  color: $color-text-2;
+  background-color: $color-backgroung-2;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+
+  &__tittle {
+    position: absolute;
+    top: 5vh;
+    left: 10%;
+    width: 10rem;
+  }
+
+  &__phone {
+    position: absolute;
+    top: 20vh;
+    left: 10%;
+
+    img {
+      width: 30rem;
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    width: 40vw;
+
+    @include respond(phone) {
+      @include absCenter;
+      width: 90vw;
+      text-align: center;
+    }
+
+    &--main {
+      font-size: 4rem;
+      font-weight: lighter;
+      padding-bottom: 4rem;
+    }
+
+    &--sub {
+      font-size: 1.5rem;
+      font-weight: lighter;
+      line-height: 4rem;
+    }
+  }
+}
