@@ -6,8 +6,9 @@
     display: inline-block;
     padding: 0.5rem 2rem;
     margin: 1rem 1rem;
-    border: none;
     border-radius: 0.4rem;
+    background-color: $color-backgroung-1;
+
     text-decoration: none;
     cursor: pointer;
 
@@ -22,9 +23,11 @@
     &:active,
     &:focus {
       transform: translateY(0px);
+      color: $color-text-1;
     }
   }
 }
+
 .btn-text {
   &:link,
   &:visited {
@@ -34,7 +37,19 @@
     margin: 1rem 1rem;
     border: none;
     border-radius: 0.4rem;
+    background-color: $color-backgroung-1;
+    color: $color-text-1;
     text-decoration: none;
     cursor: pointer;
+
+    &:hover {
+      transform: translateY(-2px) translate(-50%, 0%);
+    }
+
+    &:active,
+    &:focus {
+      transform: translateY(0px) translate(-50%, 0%);
+      color: $color-text-1;
+    }
   }
 }

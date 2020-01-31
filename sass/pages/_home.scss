@@ -4,7 +4,7 @@
   padding: 20rem 0 20rem 0;
 
   &__text {
-    text-align: center;
+    text-align: justify;
     margin: 5rem;
   }
 
@@ -12,6 +12,13 @@
     max-width: 80vw;
     max-width: 100%;
     border-radius: 50rem;
+  }
+
+  &__wiki {
+    display: block;
+    float: right;
+    margin-right: 10%;
+    margin-top: 3rem;
   }
 }
 
@@ -47,30 +54,75 @@
   padding: 20rem 0 20rem 0;
 
   &__content {
-    @include absCenter;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+
+    &__header {
+      position: absolute;
+      top: 0%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      padding-bottom: 5rem;
+      min-width: 20rem;
+    }
   }
 
   img {
     width: 3rem;
   }
+
+  &__data {
+    float: right;
+    transform: translateY(-4rem);
+  }
 }
 
 .contact {
   position: relative;
-  height: 40rem;
+  height: 50rem;
   background-color: $color-backgroung-2;
   color: $color-text-2;
 
   &__content {
     @include absCenter;
     display: inline-block;
+    width: 80%;
+    padding-top: 10rem;
 
     &__input {
-      input {
-        width: 50%;
-        padding: 6rem;
-        border-radius: 3px;
+      &--small {
+        display: inline-block;
+        width: 44%;
+        padding: 1.5rem 0;
+        margin-left: 4%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        @include respond(tab-port) {
+          width: 92%;
+          margin-top: 3rem;
+        }
       }
+      &--large {
+        display: inline-block;
+        width: 92%;
+        height: 10rem;
+        padding: 1.5rem;
+        margin-top: 3rem;
+        margin-left: 4%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+    }
+    &__btn {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, 0%);
     }
   }
 }
